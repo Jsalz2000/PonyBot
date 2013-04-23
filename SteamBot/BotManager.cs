@@ -271,9 +271,10 @@ namespace SteamBot
                 //botProc.BeginOutputReadLine();
             }
 
-
+            
             private void SpawnBotThread(Configuration.BotInfo botConfig)
             {
+                /*
                 // the bot object itself is threaded so we just build it and start it.
                 Bot b = new Bot(botConfig,
                                 config.ApiKey,
@@ -284,6 +285,7 @@ namespace SteamBot
 
                 TheBot = b;
                 TheBot.StartBot();
+                 */
             }
 
             private void BotOnOnSteamGuardRequired(object sender, SteamGuardRequiredEventArgs barf)

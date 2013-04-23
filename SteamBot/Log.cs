@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Diagnostics;
 
 namespace SteamBot
 {
@@ -98,7 +99,7 @@ namespace SteamBot
         protected void _OutputLineToConsole (LogLevel level, string line)
         {
             Console.ForegroundColor = _LogColor (level);
-            Console.WriteLine (line);
+            System.Diagnostics.Debug.WriteLine(line);
             Console.ForegroundColor = DefaultConsoleColor;
         }
 

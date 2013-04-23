@@ -6,7 +6,7 @@
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{E81DED36-EDF5-41A5-8666-A3A0C581762F}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>SteamBot</RootNamespace>
     <AssemblyName>SteamBot</AssemblyName>
   </PropertyGroup>
@@ -30,6 +30,9 @@
     <PlatformTarget>x86</PlatformTarget>
     <Externalconsole>True</Externalconsole>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
@@ -49,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BotControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BotControlForm.Designer.cs">
+      <DependentUpon>BotControlForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SteamGuardRequiredEventArgs.cs" />
     <Compile Include="Bot.cs" />
     <Compile Include="AssemblyInfo.cs" />
@@ -84,6 +93,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BotControlForm.resx">
+      <DependentUpon>BotControlForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SteamGuardForm.resx">
       <DependentUpon>SteamGuardForm.cs</DependentUpon>
     </EmbeddedResource>
